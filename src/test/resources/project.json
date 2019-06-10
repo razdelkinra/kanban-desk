@@ -1,0 +1,93 @@
+{
+  "projectId": "5cfd5d26d13d7651e826f4c2",
+  "projectName": null,
+  "boards": [
+    {
+      "boardId": null,
+      "colunm": [
+        {
+          "title": "Todo",
+          "cards": [
+            {
+              "description": "Default todo description",
+              "name": null,
+              "dutyDate": "2019-06-11T22:25:26.111276",
+              "responsible": {
+                "userId": null,
+                "name": "System",
+                "login": "System",
+                "age": 99,
+                "company": {
+                  "companyId": null,
+                  "name": "Facebook"
+                }
+              },
+              "status": "OPEN",
+              "position": null,
+              "label": [
+                {
+                  "name": "Legacy"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "In progress",
+          "cards": [
+            {
+              "description": "Default in progress description",
+              "name": null,
+              "dutyDate": "2019-06-11T22:25:26.111292",
+              "responsible": {
+                "userId": null,
+                "name": "System",
+                "login": "System",
+                "age": 99,
+                "company": {
+                  "companyId": null,
+                  "name": "Facebook"
+                }
+              },
+              "status": "CANCELED",
+              "position": null,
+              "label": [
+                {
+                  "name": "Legacy"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Done",
+          "cards": [
+            {
+              "description": "Default done description",
+              "name": null,
+              "dutyDate": "2019-07-01T22:25:26.111303",
+              "responsible": {
+                "userId": null,
+                "name": "System",
+                "login": "System",
+                "age": 99,
+                "company": {
+                  "companyId": null,
+                  "name": "Facebook"
+                }
+              },
+              "status": "PENDING",
+              "position": null,
+              "label": [
+                {
+                  "name": "Improvement"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "privacy": "PRIVATE"
+}
