@@ -15,6 +15,7 @@ extra["kotlin.version"] = plugins.getPlugin(KotlinPluginWrapper::class.java).kot
 
 repositories {
 	mavenCentral()
+	maven ( url = "http://oss.jfrog.org/artifactory/oss-snapshot-local" )
 }
 
 application {
@@ -44,14 +45,17 @@ dependencies {
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
-    implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	implementation("org.springframework.boot:spring-boot-starter-web")
 
+	implementation("com.graphql-java:graphql-spring-boot-starter:5.0.2")
+	implementation("com.graphql-java:graphiql-spring-boot-starter:5.0.2")
+
+	implementation("com.graphql-java:graphql-java-tools:5.2.3")
 
     implementation("org.springframework:spring-test")
     implementation("org.springframework:spring-context")
-    implementation("io.projectreactor.netty:reactor-netty")
     implementation("com.samskivert:jmustache")
 
     implementation("org.slf4j:slf4j-api")
@@ -60,7 +64,6 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
 
-    testImplementation("io.projectreactor:reactor-test")
     testImplementation("org.assertj:assertj-core")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.junit.jupiter:junit-jupiter-api")

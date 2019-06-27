@@ -1,13 +1,11 @@
 package com.rra.project.kanbandesk.entity
 
-import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDateTime
 
 @Document
 class Card {
 
-    @Id
     var description: String? = null
 
     var name: String? = null
