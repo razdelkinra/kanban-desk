@@ -1,0 +1,41 @@
+type Project {
+  id: ID!
+  projectName : String
+  boards : [Board!]!
+  privacy : [Privacy!]!
+}
+
+type Board {
+  boardId: ID!
+  colunm: [Column!]!
+}
+
+type Column {
+  title: String!
+  cards: [Card!]!
+}
+
+type Card {
+  description: String
+  name: String
+}
+
+type Label {
+  name: String
+}
+
+enum Privacy {
+  RIVATE
+  PUBLIC
+  COMPANY
+  TEAM
+}
+
+
+type Query {
+  boards: [Board]
+}
+
+type Mutations {
+  addBoard(boardId: ID!): Board
+}

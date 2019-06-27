@@ -4,14 +4,12 @@ import com.rra.project.kanbandesk.entity.Privacy
 import com.rra.project.kanbandesk.entity.Project
 import com.rra.project.kanbandesk.repository.ProjectRepository
 import org.springframework.stereotype.Service
-import reactor.core.publisher.Flux
-import reactor.core.publisher.Mono
 
 @Service
 class ProjectService(private val projectRepository: ProjectRepository,
                      private val boardService: BoardService) {
 
-    fun createDefaultProject(project: Project) : Mono<Project>{
+    fun createDefaultProject(project: Project): Project {
         var defaultProject = Project().also { project ->
             project.boards = listOf(boardService.createDefaultBoard())
             project.privacy = Privacy.PRIVATE
@@ -20,12 +18,12 @@ class ProjectService(private val projectRepository: ProjectRepository,
         return projectRepository.save(defaultProject)
     }
 
-    fun saveProject(project: Project): Mono<Project> {
+    fun saveProject(project: Project): Project {
         return projectRepository.save(project)
 
     }
 
-    fun findAll(): Flux<Project> {
+    fun findAll(): List<Project> {
         return projectRepository.findAll()
 
     }
